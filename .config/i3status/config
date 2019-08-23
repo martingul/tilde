@@ -1,0 +1,53 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+general {
+	output_format = "i3bar"
+	separator = ""
+  colors = true
+	color_good = "#bde077"
+	color_degraded = "#e84f4f"
+	color_bad = "#d23d3d"
+  interval = 5
+}
+
+order += "wireless _first_"
+order += "battery 0"
+order += "cpu_usage"
+order += "cpu_temperature 0"
+order += "memory"
+order += "disk /"
+order += "tztime local"
+
+wireless _first_ {
+  format_up = "%essid %bitrate"
+  format_down = "no wifi"
+  color_good = "#e1aa5d"
+}
+
+battery 0 {
+  format = "%percentage"
+	format_down = "no bat"
+	threshold_type = "percentage"
+	low_threshold = 10
+}
+
+cpu_usage {
+	format = "cpu: %usage"
+}
+
+cpu_temperature 0 {
+	format = "%degrees °C"
+}
+
+memory {
+  format = "mem: %percentage_used"
+}
+
+tztime local {
+  format = "%a %d %B %H:%M:%S %p"
+}
+
+disk "/" {
+  format = "dsk: %avail"
+}
