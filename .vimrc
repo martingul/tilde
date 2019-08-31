@@ -7,7 +7,7 @@ call plug#end()
 
 set encoding=utf-8
 set fileencoding=utf-8
-set ts=2 sw=2 et
+set ts=3 sw=2 et ai
 set number cursorline hlsearch
 set splitbelow splitright
 

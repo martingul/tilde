@@ -23,6 +23,7 @@ wireless _first_ {
   format_up = "%essid %bitrate"
   format_down = "no wifi"
   color_good = "#e1aa5d"
+  color_bad = "#cccccc"
 }
 
 battery 0 {

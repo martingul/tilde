@@ -1,4 +1,4 @@
-XTerm*faceName: Gohufont:pixelsize=12
+XTerm*faceName: GohuFont:pixelsize=11
 
 ! special
 *.foreground:   #cccccc
