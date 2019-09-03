@@ -1,4 +1,5 @@
 XTerm*faceName: GohuFont:pixelsize=11
+XTerm*VT100.Translations: #override Shift Ctrl<Key>V: insert-selection(CLIPBOARD)
 
 ! special
 *.foreground:   #cccccc
@@ -36,4 +37,3 @@ XTerm*faceName: GohuFont:pixelsize=11
 ! white
 *.color7:       #dddddd
 *.color15:      #cccccc
-
