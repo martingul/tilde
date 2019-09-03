@@ -5,7 +5,7 @@ general {
 	output_format = "i3bar"
 	separator = "|"
   colors = true
-	color_good = "#bde077"
+	color_good = "#66aabb"
 	color_degraded = "#fea63c"
 	color_bad = "#d23d3d"
   interval = 5
