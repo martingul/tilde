@@ -154,7 +154,7 @@ bindsym $mod+r mode "resize"
 focus_follows_mouse no
 
 # class                 border  bground text    indicator child_border
-client.focused          #181818 #181818 #e19b3a #e19b3a   #181818
+client.focused          #181818 #181818 #ffffff #6d878d   #181818
 client.focused_inactive #080808 #080808 #aaaaaa #080808   #080808
 client.unfocused        #080808 #080808 #cccccc #080808   #080808
 client.urgent           #9e2525 #9e2525 #ffffff #080808   #9e2525
@@ -168,10 +168,10 @@ bar {
     
   colors {
     background #000000
-    statusline #cccccc
-    separator  #666666 
+    statusline #ffffff
+    separator  #666666
 
-    focused_workspace  #111111 #e19b3a #ffffff
+    focused_workspace  #111111 #6d878d #ffffff
     active_workspace   #111111 #111111 #aaaaaa
     inactive_workspace #111111 #111111 #aaaaaa
     urgent_workspace   #ff9600 #ff9600 #ffffff
