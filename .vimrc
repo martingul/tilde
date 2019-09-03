@@ -7,17 +7,16 @@ call plug#end()
 
 set encoding=utf-8
 set fileencoding=utf-8
-set ts=3 sw=2 et ai
-set number cursorline hlsearch
+set ts=2 sw=2 et ai
+set cc=80 number cursorline hlsearch
 set splitbelow splitright
-
 
 " mappings
 let mapleader = ","
 
 command Bd bp\|bd \#
-nnoremap 1 :bp<CR>
-nnoremap 2 :bn<CR>
+nnoremap <leader>1 :bp<CR>
+nnoremap <leader>2 :bn<CR>
 nnoremap <leader>d :Bd<CR>
 nnoremap <leader>D :bd<CR>
 
@@ -37,6 +36,7 @@ colorscheme default
 hi LineNr ctermfg=0
 hi CursorLineNr ctermfg=6
 hi CursorLine cterm=NONE
+hi ColorColumn ctermbg=232
 hi MatchParen ctermfg=13 ctermbg=0
 hi Search ctermbg=0
 
@@ -46,14 +46,14 @@ hi PreProc ctermfg=3
 hi Statement ctermfg=11
 hi Identifier ctermfg=13
 hi Type ctermfg=11
-hi Constant ctermfg=8
+hi Constant ctermfg=245
 hi Comment ctermbg=233 ctermfg=8
 hi Special ctermfg=2
 hi Todo ctermbg=233 ctermfg=1
 
 hi VertSplit cterm=NONE ctermbg=NONE ctermfg=0
-hi StatusLine cterm=NONE ctermbg=NONE ctermfg=6
-hi StatusLineNC cterm=NONE ctermbg=234 ctermfg=6
+hi StatusLine cterm=NONE ctermbg=233 ctermfg=15
+hi StatusLineNC cterm=NONE ctermbg=232 ctermfg=6
 hi ErrorMsg ctermfg=9 ctermbg=NONE
 hi ModeMsg cterm=NONE ctermfg=11
 
