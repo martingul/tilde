@@ -7,7 +7,7 @@ call plug#end()
 
 set encoding=utf-8
 set fileencoding=utf-8
-set ts=2 sw=2 et ai
+set ts=4 sw=4 ai
 set cc=80 number cursorline hlsearch
 set splitbelow splitright
 
@@ -65,9 +65,9 @@ set statusline+=\ %<%F " full path
 set statusline+=\ %m " modified flag
 set statusline+=%= " jump to right
 set statusline+=%y " file type
-set statusline+=\ %l:%v/%L\  " current line:column/total lines
+set statusline+=\ %l:%v/%L " current line:column/total lines
 
 " backup and swap
 set backup
-set backupdir=~/tmp/vim/backup
-set directory=~/tmp/vim/swap
+set backupdir=~/.tmp/vim/backup
+set directory=~/.tmp/vim/swap
