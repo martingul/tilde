@@ -3,10 +3,12 @@ filetype plugin indent on
 " plugins
 call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 set encoding=utf-8
 set fileencoding=utf-8
+
 set ts=4 sw=4 ai
 set cc=80 number cursorline hlsearch
 set splitbelow splitright
@@ -19,46 +21,39 @@ nnoremap <leader>1 :bp<CR>
 nnoremap <leader>2 :bn<CR>
 nnoremap <leader>d :Bd<CR>
 nnoremap <leader>D :bd<CR>
+nnoremap <leader>n :set number!<CR>
 
 nnoremap <leader>j <C-W><C-J>
 nnoremap <leader>k <C-W><C-K>
 nnoremap <leader>l <C-W><C-L>
 nnoremap <leader>h <C-W><C-H>
 
-nnoremap f :CtrlPBuffer<CR>
-nnoremap F :CtrlP<CR>
+nnoremap <leader>f :CtrlPBuffer<CR>
+nnoremap <leader>F :CtrlP<CR>
 
 " colors
 syntax on
-set background=dark
-colorscheme default
+colorscheme nord
 
 hi LineNr ctermfg=0
-hi CursorLineNr ctermfg=6
-hi CursorLine cterm=NONE
+hi CursorLine ctermbg=NONE
 hi ColorColumn ctermbg=232
-hi MatchParen ctermfg=13 ctermbg=0
-hi Search ctermbg=0
+hi MatchParen ctermbg=233 ctermfg=5
+hi Search ctermbg=NONE ctermfg=3
+hi VertSplit cterm=NONE ctermbg=NONE ctermfg=0
 
-hi Normal ctermfg=15
-hi Visual ctermbg=0
-hi PreProc ctermfg=3
-hi Statement ctermfg=11
-hi Identifier ctermfg=13
-hi Type ctermfg=11
-hi Constant ctermfg=245
+hi WarningMsg ctermbg=NONE ctermfg=3
+hi ErrorMsg ctermbg=NONE ctermfg=1
+hi Error cterm=underline ctermbg=NONE ctermfg=1
+
+hi Visual ctermbg=235
 hi Comment ctermbg=233 ctermfg=8
 hi Special ctermfg=2
 hi Todo ctermbg=233 ctermfg=1
 
-hi VertSplit cterm=NONE ctermbg=NONE ctermfg=0
-hi StatusLine cterm=NONE ctermbg=233 ctermfg=15
-hi StatusLineNC cterm=NONE ctermbg=232 ctermfg=6
-hi ErrorMsg ctermfg=9 ctermbg=NONE
-hi ModeMsg cterm=NONE ctermfg=11
-
 " statusline
-set laststatus=2
+set laststatus=0
+
 set statusline=
 set statusline+=<%n> " buffer number
 set statusline+=\ %<%F " full path
