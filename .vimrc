@@ -46,7 +46,7 @@ hi WarningMsg ctermbg=NONE ctermfg=3
 hi ErrorMsg ctermbg=NONE ctermfg=1
 hi Error cterm=underline ctermbg=NONE ctermfg=1
 
-hi Visual ctermbg=235
+hi Visual cterm=NONE ctermbg=0
 hi Comment ctermbg=233 ctermfg=8
 hi Special ctermfg=2
 hi Todo ctermbg=233 ctermfg=1
