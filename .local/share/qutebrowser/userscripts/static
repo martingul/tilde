@@ -1,0 +1,8 @@
+#!/bin/bash
+# view a static version of a webpage to a temporary directory
+
+DIR=$(echo $QUTE_URL | sha1sum | cut -d ' ' -f 1)
+mkdir -p /tmp/static/
+httrack -r1 -O /tmp/static/$DIR $QUTE_URL
+qutebrowser "/tmp/static/$DIR/index.html"
+
