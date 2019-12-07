@@ -1,8 +1,16 @@
 #!/bin/bash
-# view a static version of a webpage to a temporary directory
+# view a static version of a webpage in a temporary directory
 
-DIR=$(echo $QUTE_URL | sha1sum | cut -d ' ' -f 1)
-mkdir -p /tmp/static/
-httrack -r1 -O /tmp/static/$DIR $QUTE_URL
-qutebrowser "/tmp/static/$DIR/index.html"
+# hash webpage url
+HASH=$(echo "$QUTE_URL" | sha1sum | cut -d ' ' -f 1)
 
+# set count to 1 if not set
+if [ -z "$QUTE_COUNT" ]; then
+	QUTE_COUNT=1
+fi
+
+# download webpage and view it
+mkdir -p "/tmp/static"
+yes | httrack -O "/tmp/static/$HASH" -r"$QUTE_COUNT" -F "$QUTE_USER_AGENT" \
+	--disable-security-limits --max-rate=0 --connection-per-second=10 "$QUTE_URL"
+qutebrowser "/tmp/static/$HASH/index.html"
